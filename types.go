@@ -13,9 +13,3 @@ type Queryable interface {
 	Query(query string, args ...interface{}) (*sql.Rows, error)
 	QueryRow(query string, args ...interface{}) *sql.Row
 }
-
-// Base class that every mingru generated table type extends.
-type Table interface {
-	// Get the SQL table name.
-	MingruSQLName() string
-}
